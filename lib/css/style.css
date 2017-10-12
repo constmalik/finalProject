@@ -1,0 +1,445 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* WEBPAGE CSS BEGINS HERE*/
+
+@media only screen and (max-width: 800px){
+	header nav {
+		position: absolute;
+		top: 75px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		background-color: #828f66;
+	}
+	 header nav li {
+		display: block;
+		border: 1px solid;
+		width: 100%;
+		margin: 0;
+	}
+	.wrapper {
+		height: 280px;
+	}
+	.home-content {
+		width: 100%;
+	}
+	.home-content .fotorama {
+		height: 50%;
+		width: 100%;
+	}
+	.search-content {
+		width: 100%;
+	}
+	.search-content .top-section {
+		height: 100%;
+	}
+}
+/* LAYOUT */
+.container {
+	padding: 0;
+	margin: 100px 0 100px 0;
+	/*height: 100%;*/
+	width: 100%;
+	/*background-color: black;*/
+
+}
+
+/* HEADER STYLE */
+
+.wrapper {
+	width: 100%;
+	background-color: #637341;
+	position: absolute;
+	top: 0;
+	border-bottom: 3px solid #3b4527;
+}
+#site-title a {
+	font-size: 4em;
+	font-family: 'Monoton', cursive;
+	text-decoration: none;
+	color: black;
+	line-height: 100px;
+	margin-left: 10px;
+}
+#site-title img {
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+}
+
+ nav {
+  /*float: left;*/
+  top: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+	line-height: 100px;
+	width: 50%;
+}
+nav li {
+  display: inline-block;
+  margin: 10px;
+  list-style: none;
+}
+nav li a {
+    color: #dfe3d9;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 10px 0 0;
+    margin: 0;
+    width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+nav li a:hover {
+	color: #313920;
+}
+
+#shoppingbag {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	margin-right: 10px;
+	/*float: left;*/
+	display: inline-block;
+}
+#shoppingbag img {
+	height: 60px;
+	width: 60px;
+}
+
+#quantity-amount {
+	position:absolute;
+	text-align: center;
+	padding: 5px;
+	border: 1px solid #3e0000;
+	border-radius: 50px;
+	background-color: #7c0000;
+	top: 10px;
+	right: 0;
+	color: white;
+}
+
+.footer {
+    background-color: #a1ab8d;
+    border-top: 3px solid #3b4527;
+    padding: 42px 0;
+    font-size: 12px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+		overflow: hidden;
+		text-align:center;
+}
+/* HOME PAGE */
+
+.home-content {
+	overflow: scroll;
+	margin: 100px 0 120px 0;
+	padding: 20px;
+	text-align: center;
+	/*border: 5px solid;*/
+	/*clear: both;*/
+}
+
+.fotorama {
+	/*border: 2px solid;*/
+	/*width: 100%;*/
+	height: 576px;
+	/*background-color: grey;*/
+	/*float: right;*/
+	display: inline-block;
+
+}
+
+#featured {
+	text-align: center;
+	font-size: 4em;
+	font-weight: 900;
+	font-family: 'Dosis', sans-serif;
+;
+}
+.featured-products {
+	height: 50%;
+	display: inline-block;
+	width: 100%;
+	margin: 20px;
+
+}
+
+/* INVENTORY PAGE*/
+
+.inventory-content {
+	margin: 100px 0;
+	padding: 5px 50px 25px 50px;
+	text-align: center;
+}
+
+.product .inventory-photos img {
+	width: 300px;
+	height: 300px;
+	border-radius: 50px;
+	/*border: 1px solid;*/
+	/*display: inline-block;*/
+}
+
+.product {
+	display: inline-block;
+	margin: 15px;
+	width: 300px;
+	height: 375px;
+	border: 10px double #6c6c6c;
+	background-color: #d8d8d8;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 10px 10px 5px #6F716C;
+	padding: 5px;
+}
+.product a {
+	text-decoration: none;
+	color: black;
+}
+.product .inventory-photos figcaption {
+	font-style: italic;
+}
+#inventory-title {
+	font-family: 'Dosis', sans-serif;
+	text-transform: uppercase;
+	font-size: 3em;
+	font-weight: bolder;
+}
+
+#details-link {
+	color: #990000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+}
+#product-name {
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	margin-top: 10px;
+	font-weight: 900;
+}
+#filter-btn {
+	color: white;
+	margin: 0;
+	border: 2px solid #7c0000;
+	border-radius: 50px;
+	width: 50px;
+	height: 35px;
+	background-color: #7c0000;
+}
+
+.filterby {
+	display: block;
+}
+/*PRODUCT DETAILS PAGE */
+
+.detail-content {
+	overflow: scroll;
+	margin: 100px 0 120px 0;
+	padding: 20px;
+	/*text-align: center;*/
+	clear: both;
+}
+.product-details {
+	text-align: center;
+	float: left;
+	border: 1px solid;
+}
+.product-picture {
+	float: right;
+}
+
+.product-description {
+	margin: 10px;
+	text-align: left;
+}
+
+#detail-photo {
+	width: 600px;
+	height: 500px;
+	border-radius: 25px;
+}
+
+#name-details {
+	font-family: 'Raleway', sans-serif;
+	font-size: 3em;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+/* CONTACT PAGE */
+.contact-content {
+	/*overflow: scroll;*/
+	margin: 100px 100px;
+	padding: 10px;
+	border-radius: 25px;
+	clear: both;
+	text-align: center;
+	display: inline-block;
+	background-color: #d8d8d8;
+}
+.contact-form {
+	float: left;
+}
+.contact-card {
+}
+.contact-form {
+	background-color: #d8d8d8;
+	display: inline-block;
+
+}
+.contact-form input {
+	margin: 10px;
+	width: 300px;
+	height: 35px;
+	border: 1px dotted;
+	border-radius: 7px;
+}
+#submitbtn {
+	color: white;
+	margin: 10px;
+	border: 5px double gray;
+	border-radius: 50px;
+	width: 100px;
+	height: 35px;
+	background-color: black;
+}
+
+.social-card {
+	width: 300px;
+	height: 400px;
+	background-color: #d8d8d8;
+	border-radius: 50px 25px;
+	float: right;
+	position: relative;
+	top: 100px;
+	right: 100px;
+
+}
+.social-card .address {
+	position: relative;
+	top: 25px;
+	margin-left: 10px;
+	font-size: 2em;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+}
+.social-card .socialmedia {
+	position: absolute;
+	font-size: 2em;
+	bottom: 0;
+	margin-left: 10px;
+}
+.social-card .socialmedia li {
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+}
+.social-card .socialmedia img {
+	width: 40px;
+	height: 40px;
+}
+#address-title {
+	font-size: 2em;
+	text-align: left;
+	font-family: 'Dosis', sans-serif;
+}
+/*SEARCH PAGE*/
+#search-title {
+	font-size: 3em;
+	font-weight: 900;
+	font-family: 'Dosis', sans-serif;
+	text-transform: uppercase;
+}
+#search-content {
+	text-align: center;
+	overflow: scroll;
+	margin: 100px 0;
+	padding: 10px;
+	/*border: 5px solid;*/
+	clear: both;
+}
+
+.search-form {
+	margin: 10px;
+}
+#searchbar {
+	height: 50px;
+	width: 400px;
+	font-size: 2em;
+}
+#searchbtn {
+	color: white;
+	margin: 0;
+	border: 2px solid #7c0000;
+	border-radius: 50px;
+	width: 50px;
+	height: 35px;
+	background-color: #7c0000;
+}
+.search-inventory {
+	/**/
+}
+/* THANK YOU PAGE */
+.thankyou-content {
+	text-align: center;
+	overflow: scroll;
+	margin: 100px 0;
+	padding: 10px;
+	border: 5px solid;
+	clear: both;
+}
+
+#thankyou {
+	font-size: 3em;
+	font-weight: bold;
+}
