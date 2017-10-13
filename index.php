@@ -32,7 +32,7 @@ include('inc/header.php');
               <figure class='inventory-photos'>
                 <img src='$product[img]' alt='$product[name]' />
                 <p id='product-name'>  $product[name] </p>
-                <figcaption> $product[description]</figcaption>
+                <figcaption> $product[brief]</figcaption>
                 <a href='details.php?product_id=$product[product_id]' id='details-link'>View Details</a>
               </figure>
             </a>
