@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 // connect database with webpage
 $db = new PDO("mysql:host=localhost;dbname=mrobinson_challengeone", "r2hstudent", "SbFaGzNgGIE8kfP");
 $db ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
