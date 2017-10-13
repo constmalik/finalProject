@@ -1,7 +1,6 @@
 <?php
-error_reporting(0);
 // connect database with webpage
-$db = new PDO("mysql:host=localhost;dbname=mrobinson_challengeone", "r2hstudent", "SbFaGzNgGIE8kfP");
+$db = new PDO("mysql:host=localhost;dbname=mrobinson_challenge_one", "r2hstudent", "SbFaGzNgGIE8kfP");
 $db ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 // create an associative array from the products table with each row as a value
 $products = $db->query("SELECT * FROM products");
