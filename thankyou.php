@@ -11,10 +11,10 @@ if(!empty($_POST)) {
 
     $prep = $db->prepare($insert);
 
-    $prep->bindParam(":name", $_POST["name"]);
-    $prep->bindParam(":email", $_POST["email"]);
-    $prep->bindParam(":phone", $_POST["phone"]);
-    $prep->bindParam(":comments", $_POST["comments"]);
+    $prep->bindParam(":name", strip_tags($_POST["name"]));
+    $prep->bindParam(":email", strip_tags($_POST["email"]));
+    $prep->bindParam(":phone", strip_tags($_POST["phone"]));
+    $prep->bindParam(":comments", strip_tags($_POST["comments"]));
 
     $prep->execute();
   } catch (Exception $e) {

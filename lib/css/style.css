@@ -48,26 +48,46 @@ table {
 }
 /* WEBPAGE CSS BEGINS HERE*/
 
-@media only screen and (max-width: 800px){
+/*What this query really means, is "If [device width] is less than or equal to 600px, then do {...}"*/
+@media screen and (max-width: 768px) and (min-width: 360px){
 	header nav {
-		position: absolute;
-		top: 75px;
-		left: 0;
+		/*position: fixed;*/
+		/*top: 0;*/
 		width: 100%;
 		text-align: center;
-		background-color: #828f66;
+		background-color: #637341;
 	}
-	 header nav li {
+	header h1 {
+		display: none;
+	}
+	header nav li {
 		display: block;
-		border: 1px solid;
+		/*border: 1px solid;*/
 		width: 100%;
 		margin: 0;
+		height: 25px;
+	}
+	header nav li a {
+		font-size: 1.5em;
+		position: relative;
+		top: -35px;
+	}
+
+	body {
+		width: 100%;
+		max-width: 100%;
+		overflow-x: hidden;
+		overflow-y: visible;
+		text-align: center;
 	}
 	.wrapper {
-		height: 280px;
+		/*height: 190px;*/
 	}
 	.home-content {
+		margin-right: 20px;
 		width: 100%;
+		/*float: none;*/
+		clear: both;
 	}
 	.home-content .fotorama {
 		height: 50%;
@@ -78,16 +98,93 @@ table {
 	}
 	.search-content .top-section {
 		height: 100%;
+		position: relative;
+	}
+	.contact-form {
+		width: 100%;
+		text-align: center;
+	}
+	.contact-content {
+		width: 350px;
+		float: none;
+		margin: 0;
+		display: block;
+		text-align: center;
+	}
+	.contact-form  #name, #email, #phone, #company{
+		margin: 10px;
+		width: 93%;
+		display: block;
+		text-align: center;
+		border: 1px dotted;
+		border-radius: 7px;
+	}
+	.contact-form #comments {
+		width: 200px;
+	}
+	.social-card {
+ 		display: inline-block;
+	}
+}
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+	header nav {
+		/*position: fixed;*/
+		/*top: 0;*/
+		width: 100%;
+		text-align: center;
+		background-color: #637341;
+	}
+	header h1 {
+		display: none;
+	}
+	header nav li {
+		display: block;
+		/*border: 1px solid;*/
+		width: 100%;
+		margin: 0;
+		height: 25px;
+	}
+	header nav li a {
+		font-size: 1.5em;
+		position: relative;
+		top: -35px;
+	}
+	.contact-form {
+		width: 100%;
+		text-align: center;
+	}
+	.contact-content {
+		width: 350px;
+		float: none;
+		margin-bottom: 50px;
+		display: block;
+		text-align: center;
+	}
+	.contact-form  #name, #email, #phone, #company{
+		margin: 10px;
+		width: 93%;
+		display: block;
+		text-align: center;
+		border: 1px dotted;
+		border-radius: 7px;
+	}
+	.contact-form #comments {
+		width: 200px;
 	}
 }
 /* LAYOUT */
+body {
+	/*width: 100%;*/
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	/*overflow-x: hidden;*/
+}
+
 .container {
 	padding: 0;
 	margin: 100px 0 100px 0;
-	/*height: 100%;*/
 	width: 100%;
-	/*background-color: black;*/
-
 }
 
 /* HEADER STYLE */
@@ -113,7 +210,7 @@ table {
 	margin-left: 10px;
 }
 
- nav {
+nav {
   /*float: left;*/
   top: 0;
   margin: 0;
@@ -181,7 +278,7 @@ nav li a:hover {
 /* HOME PAGE */
 
 .home-content {
-	overflow: scroll;
+	/*overflow: scroll;*/
 	margin: 100px 0 120px 0;
 	padding: 20px;
 	text-align: center;
@@ -249,6 +346,7 @@ nav li a:hover {
 .product .inventory-photos figcaption {
 	font-style: italic;
 }
+
 #inventory-title {
 	font-family: 'Dosis', sans-serif;
 	text-transform: uppercase;
@@ -319,22 +417,21 @@ nav li a:hover {
 /* CONTACT PAGE */
 .contact-content {
 	/*overflow: scroll;*/
-	margin: 100px 100px;
+	margin: 10px 0 0 0;
 	padding: 10px;
 	border-radius: 25px;
-	clear: both;
+	/*clear: both;*/
 	text-align: center;
 	display: inline-block;
 	background-color: #d8d8d8;
+	/*width: 50%;*/
 }
+
 .contact-form {
 	float: left;
-}
-.contact-card {
-}
-.contact-form {
 	background-color: #d8d8d8;
-	display: inline-block;
+	/*display: inline-block;*/
+	height: 400px;
 
 }
 .contact-form input {
@@ -354,37 +451,12 @@ nav li a:hover {
 	background-color: black;
 }
 
-.social-card {
-	width: 300px;
-	height: 400px;
-	background-color: #d8d8d8;
-	border-radius: 50px 25px;
-	float: right;
-	position: relative;
-	top: 100px;
-	right: 100px;
-
-}
-.social-card .address {
-	position: relative;
-	top: 25px;
-	margin-left: 10px;
-	font-size: 2em;
-	font-family: 'Dosis', sans-serif;
-	text-align: center;
-}
-.social-card .socialmedia {
-	position: absolute;
-	font-size: 2em;
-	bottom: 0;
-	margin-left: 10px;
-}
-.social-card .socialmedia li {
+section .socialmedia li {
 	text-decoration: none;
 	color: white;
 	display: inline-block;
 }
-.social-card .socialmedia img {
+section .socialmedia img {
 	width: 40px;
 	height: 40px;
 }
@@ -435,7 +507,7 @@ nav li a:hover {
 	overflow: scroll;
 	margin: 100px 0;
 	padding: 10px;
-	border: 5px solid;
+	/*border: 5px solid;*/
 	clear: both;
 }
 

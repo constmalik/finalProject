@@ -1,7 +1,8 @@
-<!DOCTYPE html>
 <?php
 session_start();
+$_SESSION['quantity'] = $_SESSION['quantity'] + $_GET['quantity'];
 ?>
+<!DOCTYPE html>
 <html>
 <head>
   <title>AfroCentric</title>
@@ -18,6 +19,7 @@ session_start();
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   <!-- time function refreshes webpage so that browser doesnt pull from the cache -->
+  <link rel="stylesheet" href="./lib/css/style.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="./lib/css/style.css?v=<?php echo time(); ?>">
 </head>
 <body>

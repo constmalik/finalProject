@@ -1,8 +1,5 @@
 <?php
-session_start();
 include('inc/header.php');
-$_SESSION['quantity'] = $_SESSION['quantity'] + $_GET['quantity'];
-
 try {
   $id = $_GET['product_id'];
 
@@ -25,7 +22,7 @@ try {
           <div class='product-description'>
             <p> $$product[price] </p>
             <p>$product[description]</p>
-            <form action='details.php' method='get' >
+            <form action='inventory.php' method='get' >
               <input type='number' name='quantity' placeholder='' min='1' max='10'/>
               <input type='submit' value='Add to Bag' />
             </form>
