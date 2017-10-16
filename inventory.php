@@ -13,14 +13,15 @@ include('inc/header.php');
           <option value="accessories">Accessories</option>
           <option value="clothing">Apparel</option>
         </select>
+        <!-- submission for filter form -->
         <input type="submit" value="filter" id="filter-btn">
       </form>
       <div class="inventory">
         <?php
-
+        // GET variable for user's selection from filter form
         $cat = $_GET['filter'];
-
-        if(isset($_GET['filter']) && $_GET['filter'] == 'all') {
+        //$_GET['filter'] == 'all'
+        if(isset($_GET['filter'])) {
           $filter = "SELECT * FROM products";
 
           $prep = $db->prepare($filter);
