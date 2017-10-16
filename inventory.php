@@ -20,8 +20,8 @@ include('inc/header.php');
         <?php
         // GET variable for user's selection from filter form
         $cat = $_GET['filter'];
-        //$_GET['filter'] == 'all'
-        if(isset($_GET['filter'])) {
+        //
+        if(isset($_GET['filter']) && $_GET['filter'] == 'all') {
           $filter = "SELECT * FROM products";
 
           $prep = $db->prepare($filter);
