@@ -16,7 +16,7 @@ include('inc/header.php');
       </div>
 
       <div class="featured-products">
-        <h2 id="featured">Feautured Items</h2>
+        <h2 id="featured">Featured Items</h2>
         <?php
         //randomly selects 4 items from catalog array to suggest to user
         $random = array_rand($products, 4);
