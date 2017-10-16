@@ -20,14 +20,20 @@ include('inc/header.php');
         <?php
         // GET variable for user's selection from filter form
         $cat = $_GET['filter'];
-        //checks if
+        //checks if get variable has been set.
+        //also check if variables value is equal to all products
+        //if both conditionals are true then all products will be displayed.
         if(isset($cat) && $cat == 'all') {
+          // setting query statement equal to variable that displayed all products from table.
           $filter = "SELECT * FROM products";
-
+          // query statement is passed into prepare state
+          // prepares query statement as well as prevents sql injections
           $prep = $db->prepare($filter);
+          // executes
           $prep->execute();
-
+          // loop through array from database that was create from the query statement
           foreach($prep->fetchAll() as $product) {
+            // renders product image, description, name, price to the screen
             echo "
             <div class='product'>
               <a href='details.php?product_id=$product[product_id]'>
@@ -42,7 +48,9 @@ include('inc/header.php');
             </div>
             ";
           }
+          // if get variable is set to anything else besides all that category of products will be displayed to the browser
         } else {
+          //
           $filter = "SELECT * FROM products WHERE category LIKE '%{$cat}%'";
 
           $prep = $db->prepare($filter);
@@ -66,8 +74,6 @@ include('inc/header.php');
         ?>
       </div>
     </div>
-
-  </div> <!-- END CONTENT -->
 <?php
 include('inc/footer.php');
 ?>
