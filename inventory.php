@@ -1,8 +1,10 @@
 <?php
 include('inc/header.php');
 ?>
+  <!-- wrapper for inventory content -->
     <div class="inventory-content">
       <h1 id="inventory-title">Products</h1>
+      <!-- form that allows user to filter products -->
       <form class="filterby" action="inventory.php" method="get">
         <select class="filter" name="filter">
           <option value="all">All Products</option>
@@ -11,7 +13,7 @@ include('inc/header.php');
           <option value="accessories">Accessories</option>
           <option value="clothing">Apparel</option>
         </select>
-        <input type="submit" name="category" value="filter" id="filter-btn">
+        <input type="submit" value="filter" id="filter-btn">
       </form>
       <div class="inventory">
         <?php
